@@ -1,0 +1,18 @@
+.container {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input {
+    display: block;
+    flex: 0 1 280px;
+
+    &+.input {
+        margin-left: 20px;
+    }
+}

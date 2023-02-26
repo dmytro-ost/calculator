@@ -1,1 +1,21 @@
-<p>calcualtor works!</p>
+<div class="container">
+    <form [formGroup]="formCalculator">
+        <app-input-scale class="input"
+            formControlName="storageCtrl"
+            [min]="0"
+            [max]="1000"
+            [step]="1"
+            [name]="'Storage'"
+            [unit]="'GB'">
+        </app-input-scale>
+
+        <app-input-scale class="input"
+            formControlName="transferCtrl"
+            [min]="0"
+            [max]="1000"
+            [step]="1"
+            [name]="'Transfer'"
+            [unit]="'GB'">
+        </app-input-scale>
+    </form>
+</div>
