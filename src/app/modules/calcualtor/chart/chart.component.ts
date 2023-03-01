@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import * as Highcharts from 'highcharts';
 import Accessibility from 'highcharts/modules/Accessibility';
 import { CHART } from 'src/app/core/constants/localstorage';
@@ -17,6 +17,7 @@ import { untilDestroyed } from 'src/app/shared/helpers/until-destoyed.func';
   selector: 'app-chart',
   templateUrl: './chart.component.html',
   styleUrls: ['./chart.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 @Unsubscribe()
 export class ChartComponent implements OnInit, OnDestroy {
