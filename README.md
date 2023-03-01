@@ -15,5 +15,5 @@ npm i
 ## Start
 
 ```
-npm satrt
+npm start
 ```
