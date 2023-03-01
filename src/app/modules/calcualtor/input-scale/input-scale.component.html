@@ -1,6 +1,14 @@
 <div class="header">
     <div class="header__left">{{ name }}: </div>
-    <div class="header__right">{{ input.value }} {{ unit }}</div>
+    <div class="header__right"> 
+        <input type="number" 
+            [value]="input.value" 
+            [(ngModel)]="value" 
+            (ngModelChange)="inputChanged($event)" 
+            [min]="min" 
+            [max]="max"> 
+        {{ unit }}
+    </div>
 </div>
 <input type="range" #input="ngModel"
     [min]="min" 

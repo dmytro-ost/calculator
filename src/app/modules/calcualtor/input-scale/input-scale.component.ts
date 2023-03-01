@@ -1,5 +1,5 @@
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { ChangeDetectionStrategy, Component,  forwardRef, HostBinding, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, forwardRef, HostBinding, Input } from '@angular/core';
 
 @Component({
   selector: 'app-input-scale',
@@ -52,6 +52,9 @@ export class InputScaleComponent implements ControlValueAccessor {
   }
 
   inputChanged(val: number) {
+    if (val > this.max) val = this.max;
+    if (val < this.min) val = this.min;
+
     this.onChange(val);
   }
 

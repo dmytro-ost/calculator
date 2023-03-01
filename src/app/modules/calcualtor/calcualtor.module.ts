@@ -4,13 +4,14 @@ import { CalcualtorComponent } from './calcualtor/calcualtor.component';
 import { CalcualtorRoutingModule } from './calculator-routing.module';
 import { InputScaleComponent } from './input-scale/input-scale.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { ChartComponent } from './chart/chart.component';
 
 
 @NgModule({
   declarations: [
     CalcualtorComponent,
-    InputScaleComponent
+    InputScaleComponent,
+    ChartComponent
   ],
   imports: [
     CommonModule,
